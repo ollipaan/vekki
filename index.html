@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vekki — Tietosuojaseloste / Privacy Policy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap" rel="stylesheet" />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -21,10 +22,9 @@
       justify-content: space-between;
     }
     .wordmark {
-      font-size: 32px;
+      font-family: 'Yesteryear', cursive;
+      font-size: 36px;
       color: #E07B54;
-      font-style: italic;
-      letter-spacing: -0.5px;
     }
     .lang-toggle {
       display: flex;
@@ -144,104 +144,5 @@
         <h2>5. Kolmannet osapuolet</h2>
         <ul>
           <li><strong>Supabase</strong> — tietokanta ja tallennus</li>
-          <li><strong>Expo / EAS</strong> — sovelluksen jakelu</li>
-          <li><strong>Clipdrop</strong> — vaatekuvan taustan poisto (kuva lähetetään palveluun käsittelyä varten, ei tallenneta pysyvästi)</li>
+          <li><strong>Apple App Store</strong> — sovelluksen jakelu</li>
         </ul>
-
-        <h2>6. Lasten tiedot</h2>
-        <p>Sovellus on suunniteltu perhekäyttöön ja voi sisältää lasten tietoja. Lapsen tiedot tallennetaan ainoastaan huoltajan luomaan käyttäjätiliin. Profiilikuvat, jotka voivat sisältää lasten kasvoja, tallennetaan yksityisesti.</p>
-
-        <h2>7. Oikeutesi</h2>
-        <p>Sinulla on oikeus:</p>
-        <ul>
-          <li>Tarkastaa tallentamamme tiedot</li>
-          <li>Pyytää tietojesi poistamista</li>
-          <li>Peruuttaa suostumuksesi milloin tahansa</li>
-        </ul>
-        <p>Ota yhteyttä: <a href="mailto:ollip.paananen@gmail.com">ollip.paananen@gmail.com</a></p>
-
-        <h2>8. Muutokset tietosuojaselosteeseen</h2>
-        <p>Voimme päivittää tätä tietosuojaselostetta. Ilmoitamme muutoksista sovelluksen kautta.</p>
-      </div>
-    </div>
-
-    <!-- ENGLISH -->
-    <div class="section" id="en">
-      <h1>Privacy Policy</h1>
-      <p class="updated">Last updated April 6, 2025</p>
-
-      <div class="card">
-        <h2>1. Data Controller</h2>
-        <p>Vekki App<br>
-        Contact: <a href="mailto:ollip.paananen@gmail.com">ollip.paananen@gmail.com</a></p>
-
-        <h2>2. Data We Collect</h2>
-        <p>We collect the following information when you use the app:</p>
-        <p><strong>Account information</strong></p>
-        <ul>
-          <li>Email address</li>
-          <li>Password (stored encrypted)</li>
-        </ul>
-        <p><strong>Profile information</strong></p>
-        <ul>
-          <li>Display name</li>
-          <li>Profile photo</li>
-        </ul>
-        <p><strong>Family member information</strong></p>
-        <ul>
-          <li>Name</li>
-          <li>Profile photo</li>
-          <li>Height</li>
-          <li>Clothing, shoe, and hat sizes</li>
-        </ul>
-        <p><strong>Wardrobe information</strong></p>
-        <ul>
-          <li>Item names, categories, colors, brands, and sizes</li>
-          <li>Photos of clothing items</li>
-          <li>Purchase prices and dates (optional)</li>
-          <li>Outfit combinations</li>
-        </ul>
-
-        <h2>3. Why We Collect Data</h2>
-        <p>Data is used solely to provide the app's functionality. We do not use your data for marketing purposes or share it with third parties for advertising.</p>
-
-        <h2>4. Data Storage</h2>
-        <p>Data is stored in the Supabase cloud service. Profile photos are stored in private storage and are not publicly accessible. Clothing photos are stored in cloud storage.</p>
-
-        <h2>5. Third Parties</h2>
-        <ul>
-          <li><strong>Supabase</strong> — database and storage</li>
-          <li><strong>Expo / EAS</strong> — app distribution</li>
-          <li><strong>Clipdrop</strong> — background removal for clothing photos (image is sent for processing and not stored permanently)</li>
-        </ul>
-
-        <h2>6. Children's Data</h2>
-        <p>The app is designed for family use and may include information about children. A child's data is stored only within the parent or guardian's account. Profile photos, which may include children's faces, are stored privately.</p>
-
-        <h2>7. Your Rights</h2>
-        <p>You have the right to:</p>
-        <ul>
-          <li>Access the data we store about you</li>
-          <li>Request deletion of your data</li>
-          <li>Withdraw your consent at any time</li>
-        </ul>
-        <p>Contact us: <a href="mailto:ollip.paananen@gmail.com">ollip.paananen@gmail.com</a></p>
-
-        <h2>8. Changes to This Policy</h2>
-        <p>We may update this privacy policy. We will notify you of any changes through the app.</p>
-      </div>
-    </div>
-
-  </div>
-
-  <script>
-    function setLang(lang) {
-      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'))
-      document.getElementById(lang).classList.add('active')
-      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'))
-      document.querySelector(`[onclick="setLang('${lang}')"]`).classList.add('active')
-      document.documentElement.lang = lang
-    }
-  </script>
-</body>
-</html>
