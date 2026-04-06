@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vekki — Tietosuojaseloste / Privacy Policy</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #F5F2EF;
+      color: #2D2A27;
+      line-height: 1.7;
+    }
+    header {
+      background: #F5F2EF;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      padding: 24px 24px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .wordmark {
+      font-size: 32px;
+      color: #E07B54;
+      font-style: italic;
+      letter-spacing: -0.5px;
+    }
+    .lang-toggle {
+      display: flex;
+      gap: 8px;
+    }
+    .lang-btn {
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid rgba(0,0,0,0.15);
+      background: transparent;
+      font-size: 13px;
+      cursor: pointer;
+      color: #6B6560;
+      transition: all 0.15s;
+    }
+    .lang-btn.active {
+      background: #E07B54;
+      color: white;
+      border-color: #E07B54;
+    }
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    .section { display: none; }
+    .section.active { display: block; }
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #2D2A27;
+    }
+    .updated {
+      font-size: 13px;
+      color: #9E9890;
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 17px;
+      font-weight: 600;
+      margin-top: 36px;
+      margin-bottom: 10px;
+      color: #2D2A27;
+    }
+    p { margin-bottom: 12px; color: #4A4540; }
+    ul {
+      margin: 8px 0 12px 20px;
+      color: #4A4540;
+    }
+    li { margin-bottom: 4px; }
+    a { color: #E07B54; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wordmark">Vekki</div>
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('fi')">FI</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- FINNISH -->
+    <div class="section active" id="fi">
+      <h1>Tietosuojaseloste</h1>
+      <p class="updated">Päivitetty 6.4.2025</p>
+
+      <div class="card">
+        <h2>1. Rekisterinpitäjä</h2>
+        <p>Vekki-sovellus<br>
+        Yhteystiedot: <a href="mailto:ollip.paananen@gmail.com">ollip.paananen@gmail.com</a></p>
+
+        <h2>2. Mitä tietoja keräämme</h2>
+        <p>Keräämme seuraavia tietoja sovelluksen käytön yhteydessä:</p>
+        <p><strong>Tilitiedot</strong></p>
+        <ul>
+          <li>Sähköpostiosoite</li>
+          <li>Salasana (tallennetaan salattuna)</li>
+        </ul>
+        <p><strong>Profiilitiedot</strong></p>
+        <ul>
+          <li>Näyttönimi</li>
+          <li>Profiilikuva</li>
+        </ul>
+        <p><strong>Perheenjäsenten tiedot</strong></p>
+        <ul>
+          <li>Nimi</li>
+          <li>Profiilikuva</li>
+          <li>Pituus</li>
+          <li>Vaate-, kenkä- ja päähinekoot</li>
+        </ul>
+        <p><strong>Vaatekaappitiedot</strong></p>
+        <ul>
+          <li>Vaatteiden nimet, kategoriat, värit, merkit ja koot</li>
+          <li>Vaatteiden valokuvat</li>
+          <li>Ostohinnat ja -päivämäärät (vapaaehtoinen)</li>
+          <li>Asuyhdistelmät</li>
+        </ul>
+
+        <h2>3. Miksi keräämme tietoja</h2>
+        <p>Tietoja käytetään ainoastaan sovelluksen toiminnan mahdollistamiseen. Tietoja ei käytetä markkinointiin eikä luovuteta kolmansille osapuolille mainontaa varten.</p>
+
+        <h2>4. Tietojen säilytys</h2>
+        <p>Tiedot tallennetaan Supabase-pilvipalveluun. Profiilikuvat tallennetaan yksityiseen tallennustilaan, josta ne eivät ole julkisesti saatavilla. Vaatteiden kuvat tallennetaan pilvipalveluun.</p>
+
+        <h2>5. Kolmannet osapuolet</h2>
+        <ul>
+          <li><strong>Supabase</strong> — tietokanta ja tallennus</li>
+          <li><strong>Expo / EAS</strong> — sovelluksen jakelu</li>
+          <li><strong>Clipdrop</strong> — vaatekuvan taustan poisto (kuva lähetetään palveluun käsittelyä varten, ei tallenneta pysyvästi)</li>
+        </ul>
+
+        <h2>6. Lasten tiedot</h2>
+        <p>Sovellus on suunniteltu perhekäyttöön ja voi sisältää lasten tietoja. Lapsen tiedot tallennetaan ainoastaan huoltajan luomaan käyttäjätiliin. Profiilikuvat, jotka voivat sisältää lasten kasvoja, tallennetaan yksityisesti.</p>
+
+        <h2>7. Oikeutesi</h2>
+        <p>Sinulla on oikeus:</p>
+        <ul>
+          <li>Tarkastaa tallentamamme tiedot</li>
+          <li>Pyytää tietojesi poistamista</li>
+          <li>Peruuttaa suostumuksesi milloin tahansa</li>
+        </ul>
+        <p>Ota yhteyttä: <a href="mailto:ollip.paananen@gmail.com">ollip.paananen@gmail.com</a></p>
+
+        <h2>8. Muutokset tietosuojaselosteeseen</h2>
+        <p>Voimme päivittää tätä tietosuojaselostetta. Ilmoitamme muutoksista sovelluksen kautta.</p>
+      </div>
+    </div>
+
+    <!-- ENGLISH -->
+    <div class="section" id="en">
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated April 6, 2025</p>
+
+      <div class="card">
+        <h2>1. Data Controller</h2>
+        <p>Vekki App<br>
+        Contact: <a href="mailto:ollip.paananen@gmail.com">ollip.paananen@gmail.com</a></p>
+
+        <h2>2. Data We Collect</h2>
+        <p>We collect the following information when you use the app:</p>
+        <p><strong>Account information</strong></p>
+        <ul>
+          <li>Email address</li>
+          <li>Password (stored encrypted)</li>
+        </ul>
+        <p><strong>Profile information</strong></p>
+        <ul>
+          <li>Display name</li>
+          <li>Profile photo</li>
+        </ul>
+        <p><strong>Family member information</strong></p>
+        <ul>
+          <li>Name</li>
+          <li>Profile photo</li>
+          <li>Height</li>
+          <li>Clothing, shoe, and hat sizes</li>
+        </ul>
+        <p><strong>Wardrobe information</strong></p>
+        <ul>
+          <li>Item names, categories, colors, brands, and sizes</li>
+          <li>Photos of clothing items</li>
+          <li>Purchase prices and dates (optional)</li>
+          <li>Outfit combinations</li>
+        </ul>
+
+        <h2>3. Why We Collect Data</h2>
+        <p>Data is used solely to provide the app's functionality. We do not use your data for marketing purposes or share it with third parties for advertising.</p>
+
+        <h2>4. Data Storage</h2>
+        <p>Data is stored in the Supabase cloud service. Profile photos are stored in private storage and are not publicly accessible. Clothing photos are stored in cloud storage.</p>
+
+        <h2>5. Third Parties</h2>
+        <ul>
+          <li><strong>Supabase</strong> — database and storage</li>
+          <li><strong>Expo / EAS</strong> — app distribution</li>
+          <li><strong>Clipdrop</strong> — background removal for clothing photos (image is sent for processing and not stored permanently)</li>
+        </ul>
+
+        <h2>6. Children's Data</h2>
+        <p>The app is designed for family use and may include information about children. A child's data is stored only within the parent or guardian's account. Profile photos, which may include children's faces, are stored privately.</p>
+
+        <h2>7. Your Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+          <li>Access the data we store about you</li>
+          <li>Request deletion of your data</li>
+          <li>Withdraw your consent at any time</li>
+        </ul>
+        <p>Contact us: <a href="mailto:ollip.paananen@gmail.com">ollip.paananen@gmail.com</a></p>
+
+        <h2>8. Changes to This Policy</h2>
+        <p>We may update this privacy policy. We will notify you of any changes through the app.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'))
+      document.getElementById(lang).classList.add('active')
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'))
+      document.querySelector(`[onclick="setLang('${lang}')"]`).classList.add('active')
+      document.documentElement.lang = lang
+    }
+  </script>
+</body>
+</html>
