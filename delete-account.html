@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -64,15 +64,15 @@
   <header>
     <div class="wordmark">Vekki</div>
     <div class="lang-toggle">
-      <button class="lang-btn active" onclick="setLang('fi')">FI</button>
-      <button class="lang-btn" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('fi')">FI</button>
+      <button class="lang-btn active" onclick="setLang('en')">EN</button>
     </div>
   </header>
 
   <div class="container">
 
     <!-- FINNISH -->
-    <div class="section active" id="fi">
+    <div class="section" id="fi">
       <h1>Tilin poisto</h1>
       <p class="updated">Vekki · Päivitetty 11.10.2026</p>
       <div class="card">
@@ -95,7 +95,7 @@
     </div>
 
     <!-- ENGLISH -->
-    <div class="section" id="en">
+    <div class="section active" id="en">
       <h1>Delete account</h1>
       <p class="updated">Vekki · Last updated October 11, 2026</p>
       <div class="card">
@@ -127,8 +127,8 @@
       document.querySelector(`[onclick="setLang('${lang}')"]`).classList.add('active')
       document.documentElement.lang = lang
     }
-    // Kieli osoitteesta (#en) tai selaimesta: muu kuin suomi → englanti
-    if (location.hash === '#en' || (location.hash !== '#fi' && !/^fi/i.test(navigator.language || ''))) setLang('en')
+    // Oletuksena englanti, suomi osoitteella #fi
+    if (location.hash === '#fi') setLang('fi')
   </script>
 </body>
 </html>
