@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F5F2EF">
+<meta name="robots" content="noindex">
+
+<title>Email confirmed – Vekki</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap" rel="stylesheet">
+
+<!-- Supabase ohjaa tänne sähköpostivahvistuksen jälkeen (sovelluksen signUp → emailRedirectTo).
+     Kieli valitaan selaimen kielen mukaan (fi → suomi, muut → englanti).
+     Ei analytiikkaa: osoitteen #-osassa voi olla kirjautumistunnisteita, jotka poistetaan heti. -->
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: #F5F2EF;
+    color: #2D2A27;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .container { max-width: 560px; margin: 0 auto; padding: 0 22px; }
+  header { padding: 20px 0; border-bottom: 1px solid rgba(0,0,0,0.08); }
+  header .container { display: flex; justify-content: space-between; align-items: center; }
+  .wordmark { font-family: 'Yesteryear', cursive; font-size: 36px; color: #E07B54; text-decoration: none; }
+  .lang {
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 999px;
+    padding: 4px 12px;
+    font-size: 13px;
+    color: #6B6560;
+    background: none;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  main { flex: 1; padding: 64px 0 80px; }
+  .card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 36px 28px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .icon {
+    width: 64px; height: 64px;
+    margin: 0 auto 24px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(74, 124, 89, 0.12);
+    color: #4A7C59;
+    font-size: 32px; font-weight: 700;
+  }
+  .icon.warn { background: rgba(224, 123, 84, 0.15); color: #E07B54; }
+  h1 { font-size: clamp(24px, 5vw, 30px); font-weight: 700; line-height: 1.2; margin-bottom: 14px; }
+  p { color: #4A4540; font-size: 17px; line-height: 1.6; }
+  p + p { margin-top: 10px; }
+  .open-app {
+    display: inline-block;
+    margin-top: 26px;
+    background: #E07B54;
+    color: #fff;
+    border-radius: 999px;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .open-app:active { opacity: 0.85; }
+  footer { padding: 32px 0 48px; color: #9E9890; font-size: 13px; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <a class="wordmark" href="./">Vekki</a>
+    <button class="lang" id="lang-toggle" type="button">FI</button>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <!-- Vahvistus onnistui -->
+    <div class="card" data-state="ok" data-lang="en">
+      <div class="icon">✓</div>
+      <h1>Email confirmed</h1>
+      <p>Your account is ready. Go back to the Vekki app – it continues automatically, or you can sign in with your email and password.</p>
+      <a class="open-app" data-open-app hidden href="vekki://">Open Vekki</a>
+    </div>
+    <div class="card" data-state="ok" data-lang="fi" hidden>
+      <div class="icon">✓</div>
+      <h1>Sähköposti vahvistettu</h1>
+      <p>Tilisi on nyt valmis. Palaa Vekki-sovellukseen – se jatkaa automaattisesti, tai voit kirjautua sähköpostiosoitteellasi ja salasanallasi.</p>
+      <a class="open-app" data-open-app hidden href="vekki://">Avaa Vekki</a>
+    </div>
+
+    <!-- Linkki vanhentunut tai jo käytetty -->
+    <div class="card" data-state="error" data-lang="en" hidden>
+      <div class="icon warn">!</div>
+      <h1>This link no longer works</h1>
+      <p>The confirmation link has expired or was already used. Try signing in to the Vekki app – if your account is already confirmed, it will work.</p>
+      <p>If you can't sign in, tap "Send again" in the app to get a new link.</p>
+      <a class="open-app" data-open-app hidden href="vekki://">Open Vekki</a>
+    </div>
+    <div class="card" data-state="error" data-lang="fi" hidden>
+      <div class="icon warn">!</div>
+      <h1>Linkki ei enää toimi</h1>
+      <p>Vahvistuslinkki on vanhentunut tai jo käytetty. Kokeile kirjautua Vekki-sovellukseen: jos tili on jo vahvistettu, kirjautuminen onnistuu.</p>
+      <p>Jos kirjautuminen ei onnistu, napauta sovelluksessa "Lähetä uudelleen", niin saat uuden linkin.</p>
+      <a class="open-app" data-open-app hidden href="vekki://">Avaa Vekki</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">© 2026 Olli Paananen</div>
+</footer>
+
+<script>
+  (function () {
+    // Supabase lisää osoitteeseen joko #access_token=… (onnistui) tai error=… (vanhentunut / käytetty).
+    var params = new URLSearchParams(location.search + '&' + location.hash.replace(/^#/, ''));
+    var state = (params.get('error') || params.get('error_code')) ? 'error' : 'ok';
+    var lang = /^fi\b/i.test(navigator.language || '') ? 'fi' : 'en';
+    var mobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    var TITLES = {
+      ok: { fi: 'Sähköposti vahvistettu – Vekki', en: 'Email confirmed – Vekki' },
+      error: { fi: 'Linkki ei toimi – Vekki', en: 'Link no longer works – Vekki' },
+    };
+
+    function render() {
+      var els = document.querySelectorAll('[data-lang]');
+      for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        var s = el.getAttribute('data-state');
+        el.hidden = el.getAttribute('data-lang') !== lang || (s !== null && s !== state);
+      }
+      document.documentElement.lang = lang;
+      document.title = TITLES[state][lang];
+      document.getElementById('lang-toggle').textContent = lang === 'fi' ? 'EN' : 'FI';
+    }
+
+    // "Avaa Vekki" vain puhelimella. Tunnisteita ei välitetä sovellukselle: sovellus
+    // kirjautuu itse, kun se palaa etualalle (LoginScreen, vahvistusnäkymä).
+    if (mobile) {
+      var buttons = document.querySelectorAll('[data-open-app]');
+      for (var j = 0; j < buttons.length; j++) buttons[j].hidden = false;
+    }
+
+    document.getElementById('lang-toggle').addEventListener('click', function () {
+      lang = lang === 'fi' ? 'en' : 'fi';
+      render();
+    });
+
+    render();
+
+    // Poista tunnisteet osoiteriviltä, etteivät ne jää historiaan tai jaettuihin linkkeihin
+    if (location.search || location.hash) {
+      history.replaceState(null, '', location.pathname);
+    }
+  })();
+</script>
+
+</body>
+</html>
