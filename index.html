@@ -117,7 +117,7 @@
           <li><strong>Google (Gmail)</strong>: vahvistus- ja salasanaviestien lähettäminen.</li>
           <li><strong>PostHog</strong> (EU:n palvelimet): nimettömät käyttötiedot.</li>
           <li><strong>Cloudflare</strong> (EU): salatut varmuuskopiot.</li>
-          <li><strong>Kuvahaku</strong>: hakusanasi välitetään Supabasen kautta SerpApi-palvelulle, joka hakee kuvat Googlesta. Nimeäsi, sähköpostiasi tai laitteesi osoitetta ei välitetä SerpApille.</li>
+          <li><strong>Kuvahaku</strong>: hakusanasi välitetään Supabasen kautta Serper-palvelulle (varalla SerpApi), joka hakee kuvat Googlesta. Nimeäsi, sähköpostiasi tai laitteesi osoitetta ei välitetä niille. Hakutulosten esikatselukuvat ladataan Googlen palvelimilta ja valitsemasi kuva sen alkuperäiseltä sivustolta, joten ne näkevät laitteesi IP-osoitteen.</li>
           <li><strong>Expo</strong>: sovelluspäivitysten jakelu.</li>
           <li><strong>Apple App Store</strong>: sovelluksen jakelu.</li>
         </ul>
@@ -197,7 +197,7 @@
           <li><strong>Google (Gmail)</strong>: sending confirmation and password emails.</li>
           <li><strong>PostHog</strong> (EU servers): anonymous usage information.</li>
           <li><strong>Cloudflare</strong> (EU): encrypted backups.</li>
-          <li><strong>Image search</strong>: your search term is passed through Supabase to SerpApi, which fetches the images from Google. Your name, email or device address are not shared with SerpApi.</li>
+          <li><strong>Image search</strong>: your search term is passed through Supabase to Serper (with SerpApi as a backup), which fetches the images from Google. Your name, email or device address are not shared with them. Preview images are loaded from Google's servers and the image you pick from its original website, so they see your device's IP address.</li>
           <li><strong>Expo</strong>: delivering app updates.</li>
           <li><strong>Apple App Store</strong>: app distribution.</li>
         </ul>
