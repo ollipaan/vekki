@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vekki — Tilin poisto / Delete account</title>
+  <meta name="description" content="Näin poistat Vekki-tilisi ja kaikki tietosi. How to delete your Vekki account and all your data." />
+  <link href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #F5F2EF;
+      color: #2D2A27;
+      line-height: 1.7;
+    }
+    header {
+      background: #F5F2EF;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      padding: 24px 24px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .wordmark {
+      font-family: 'Yesteryear', cursive;
+      font-size: 36px;
+      color: #E07B54;
+    }
+    .lang-toggle { display: flex; gap: 8px; }
+    .lang-btn {
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid rgba(0,0,0,0.15);
+      background: transparent;
+      font-size: 13px;
+      cursor: pointer;
+      color: #6B6560;
+      transition: all 0.15s;
+    }
+    .lang-btn.active { background: #E07B54; color: white; border-color: #E07B54; }
+    .container { max-width: 680px; margin: 0 auto; padding: 48px 24px 80px; }
+    .section { display: none; }
+    .section.active { display: block; }
+    h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; color: #2D2A27; }
+    .updated { font-size: 13px; color: #9E9890; margin-bottom: 40px; }
+    h2 { font-size: 17px; font-weight: 600; margin-top: 36px; margin-bottom: 10px; color: #2D2A27; }
+    p { margin-bottom: 12px; color: #4A4540; }
+    ul { margin: 8px 0 12px 20px; color: #4A4540; }
+    li { margin-bottom: 4px; }
+    ol { margin: 8px 0 12px 20px; color: #4A4540; }
+    a { color: #E07B54; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wordmark">Vekki</div>
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('fi')">FI</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- FINNISH -->
+    <div class="section active" id="fi">
+      <h1>Tilin ja tietojen poisto</h1>
+      <p class="updated">Vekki · Päivitetty 11.10.2026</p>
+      <div class="card">
+        <p>Voit poistaa Vekki-tilisi ja kaikki siihen liittyvät tiedot milloin tahansa.</p>
+
+        <h2>Poisto sovelluksessa</h2>
+        <ol>
+          <li>Avaa Vekki ja siirry <strong>Omat tiedot</strong> -välilehdelle.</li>
+          <li>Valitse sivun alareunasta <strong>Poista tili</strong>.</li>
+          <li>Vahvista poisto.</li>
+        </ol>
+        <p>Tili ja kaikki tiedot poistetaan heti.</p>
+
+        <h2>Poisto ilman sovellusta</h2>
+        <p>Lähetä sähköposti osoitteeseen <a href="mailto:vekkiapp@outlook.com?subject=Poista%20tili">vekkiapp@outlook.com</a> siitä sähköpostiosoitteesta, jolla olet rekisteröitynyt, otsikolla <strong>Poista tili</strong>. Poistamme tilin ja tiedot 30 päivän kuluessa ja vahvistamme poiston sähköpostilla.</p>
+
+        <h2>Mitä poistetaan</h2>
+        <ul>
+          <li>Käyttäjätili (sähköpostiosoite ja salasana)</li>
+          <li>Perheenjäsenten tiedot: nimet, pituudet, koot ja profiilikuvat</li>
+          <li>Vaatteet, varusteet ja niiden kuvat</li>
+          <li>Ostoslista ja asut</li>
+          <li>Omat kategoriat ja itse lisätyt merkit</li>
+          <li>Kuvahaun käyttölaskuri</li>
+        </ul>
+
+        <h2>Mitä säilyy ja kuinka kauan</h2>
+        <p>Tiedoista otetaan salattuja varmuuskopioita, joita käytetään vain palvelun palauttamiseen vikatilanteessa. Poistetut tiedot häviävät varmuuskopioista automaattisesti viimeistään 90 päivän kuluessa.</p>
+        <p>Sovelluksen käyttötilastot (PostHog) ovat nimettömiä, eikä niitä voi yhdistää sinuun.</p>
+
+        <p>Lisätietoja: <a href="./">tietosuojaseloste</a></p>
+      </div>
+    </div>
+
+    <!-- ENGLISH -->
+    <div class="section" id="en">
+      <h1>Delete your account and data</h1>
+      <p class="updated">Vekki · Last updated October 11, 2026</p>
+      <div class="card">
+        <p>You can delete your Vekki account and all associated data at any time.</p>
+
+        <h2>Delete in the app</h2>
+        <ol>
+          <li>Open Vekki and go to the <strong>Profile</strong> tab.</li>
+          <li>Tap <strong>Delete account</strong> at the bottom of the page.</li>
+          <li>Confirm the deletion.</li>
+        </ol>
+        <p>Your account and all data are deleted immediately.</p>
+
+        <h2>Delete without the app</h2>
+        <p>Send an email to <a href="mailto:vekkiapp@outlook.com?subject=Delete%20account">vekkiapp@outlook.com</a> from the email address you signed up with, with the subject <strong>Delete account</strong>. We will delete your account and data within 30 days and confirm by email.</p>
+
+        <h2>What is deleted</h2>
+        <ul>
+          <li>Your account (email address and password)</li>
+          <li>Family members' information: names, heights, sizes and profile photos</li>
+          <li>Clothes, gear and their photos</li>
+          <li>Wishlist and outfits</li>
+          <li>Your own categories and brands you added</li>
+          <li>Image search usage counter</li>
+        </ul>
+
+        <h2>What is kept and for how long</h2>
+        <p>Encrypted backups are used only to restore the service after a failure. Deleted data disappears from the backups automatically within 90 days.</p>
+        <p>App usage statistics (PostHog) are anonymous and cannot be linked to you.</p>
+
+        <p>More information: <a href="./">privacy policy</a></p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'))
+      document.getElementById(lang).classList.add('active')
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'))
+      document.querySelector(`[onclick="setLang('${lang}')"]`).classList.add('active')
+      document.documentElement.lang = lang
+    }
+    // Kieli osoitteesta (#en) tai selaimesta: muu kuin suomi → englanti
+    if (location.hash === '#en' || (location.hash !== '#fi' && !/^fi/i.test(navigator.language || ''))) setLang('en')
+  </script>
+</body>
+</html>
