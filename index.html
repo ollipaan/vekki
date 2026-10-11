@@ -72,130 +72,160 @@
     <!-- FINNISH -->
     <div class="section active" id="fi">
       <h1>Tietosuojaseloste</h1>
-      <p class="updated">Päivitetty 6.4.2025</p>
+      <p class="updated">Päivitetty 11.10.2026</p>
       <div class="card">
         <h2>1. Rekisterinpitäjä</h2>
-        <p>Vekki-sovellus<br>
+        <p>Olli Paananen, Vekki-sovelluksen kehittäjä<br>
         Yhteystiedot: <a href="mailto:vekkiapp@outlook.com">vekkiapp@outlook.com</a></p>
 
-        <h2>2. Mitä tietoja keräämme</h2>
-        <p>Keräämme seuraavia tietoja sovelluksen käytön yhteydessä:</p>
+        <h2>2. Mitä tietoja käsittelemme</h2>
         <p><strong>Tilitiedot</strong></p>
         <ul>
           <li>Sähköpostiosoite</li>
-          <li>Salasana (tallennetaan salattuna)</li>
+          <li>Salasana (tallennetaan salattuna, emme näe sitä)</li>
         </ul>
-        <p><strong>Profiilitiedot</strong></p>
+        <p><strong>Profiili- ja perheenjäsentiedot</strong></p>
         <ul>
-          <li>Näyttönimi</li>
-          <li>Profiilikuva</li>
-        </ul>
-        <p><strong>Perheenjäsenten tiedot</strong></p>
-        <ul>
-          <li>Nimi</li>
-          <li>Profiilikuva</li>
-          <li>Pituus</li>
-          <li>Vaate-, kenkä- ja päähinekoot</li>
+          <li>Nimet ja profiilikuvat</li>
+          <li>Pituus sekä vaate-, kenkä- ja päähinekoot</li>
         </ul>
         <p><strong>Vaatekaappitiedot</strong></p>
         <ul>
-          <li>Vaatteiden nimet, kategoriat, värit, merkit ja koot</li>
+          <li>Vaatteiden kuvaukset, merkit, kategoriat, värit, koot, kaudet ja tilat</li>
           <li>Vaatteiden valokuvat</li>
-          <li>Ostohinnat ja -päivämäärät (vapaaehtoinen)</li>
-          <li>Asuyhdistelmät</li>
+          <li>Asuyhdistelmät, ostoslista sekä itse lisätyt merkit ja kategoriat</li>
         </ul>
-
-        <h2>3. Miksi keräämme tietoja</h2>
-        <p>Tietoja käytetään ainoastaan sovelluksen toiminnan mahdollistamiseen. Tietoja ei käytetä markkinointiin eikä luovuteta kolmansille osapuolille mainontaa varten.</p>
-
-        <h2>4. Tietojen säilytys</h2>
-        <p>Tiedot tallennetaan Supabase-pilvipalveluun. Profiilikuvat tallennetaan yksityiseen tallennustilaan, josta ne eivät ole julkisesti saatavilla. Vaatteiden kuvat tallennetaan pilvipalveluun.</p>
-
-        <h2>5. Kolmannet osapuolet</h2>
+        <p><strong>Käyttötiedot</strong></p>
         <ul>
-          <li><strong>Supabase</strong> — tietokanta ja tallennus</li>
-          <li><strong>Apple App Store</strong> — sovelluksen jakelu</li>
+          <li>Nimettömät tapahtumat sovelluksen käytöstä (esim. vaatteen lisäys, asun tallennus), laitteen malli, käyttöjärjestelmä, sovellusversio ja kieli. Näitä ei yhdistetä nimeesi, sähköpostiisi tai vaatekaappisi sisältöön.</li>
+          <li>Kuvahaun hakujen määrä kuukaudessa (hakukiintiötä varten). Hakusanoja emme tallenna.</li>
         </ul>
 
-        <h2>6. Lasten tiedot</h2>
-        <p>Sovellus on suunniteltu perhekäyttöön ja voi sisältää lasten tietoja. Lapsen tiedot tallennetaan ainoastaan huoltajan luomaan käyttäjätiliin. Profiilikuvat, jotka voivat sisältää lasten kasvoja, tallennetaan yksityisesti.</p>
+        <h2>3. Mihin tietoja käytetään</h2>
+        <ul>
+          <li><strong>Sovelluksen toiminta</strong> (tilisi ja vaatekaappisi tallentaminen ja näyttäminen, kuvahaku). Peruste: palvelun tarjoaminen sinulle.</li>
+          <li><strong>Tiliviestit</strong>: sähköpostiosoitteen vahvistus ja salasanan vaihto. Peruste: palvelun tarjoaminen.</li>
+          <li><strong>Sovelluksen kehittäminen</strong> nimettömien käyttötietojen avulla. Peruste: oikeutettu etu.</li>
+          <li><strong>Varmuuskopiot</strong>, jotta tietosi eivät katoa vikatilanteessa. Peruste: oikeutettu etu.</li>
+        </ul>
+        <p>Emme käytä tietoja markkinointiin, emme seuraa sinua muissa sovelluksissa emmekä myy tai luovuta tietoja mainontaan.</p>
 
-        <h2>7. Oikeutesi</h2>
+        <h2>4. Palveluntarjoajat</h2>
+        <p>Käytämme seuraavia palveluita, jotka käsittelevät tietoja puolestamme:</p>
+        <ul>
+          <li><strong>Supabase</strong>: tietokanta, kirjautuminen ja kuvat. Palvelimet sijaitsevat Lontoossa, Isossa-Britanniassa, jonka tietosuojataso on EU:n hyväksymä.</li>
+          <li><strong>Google (Gmail)</strong>: vahvistus- ja salasanaviestien lähettäminen.</li>
+          <li><strong>PostHog</strong> (EU:n palvelimet): nimettömät käyttötiedot.</li>
+          <li><strong>Cloudflare</strong> (EU): salatut varmuuskopiot.</li>
+          <li><strong>Kuvahaku</strong>: hakusanasi välitetään oman palvelimemme (Render) kautta SerpApi-palvelulle, joka hakee kuvat Googlesta. Nimeäsi, sähköpostiasi tai laitteesi osoitetta ei välitetä niille.</li>
+          <li><strong>Expo</strong>: sovelluspäivitysten jakelu.</li>
+          <li><strong>Apple App Store</strong>: sovelluksen jakelu.</li>
+        </ul>
+        <p>Osa palveluntarjoajista on Yhdysvalloissa. Tietojen siirroissa EU:n ulkopuolelle käytetään EU:n hyväksymiä suojakeinoja, kuten vakiosopimuslausekkeita.</p>
+
+        <h2>5. Kuvien näkyvyys</h2>
+        <p>Profiilikuvat, jotka voivat sisältää lasten kasvoja, tallennetaan yksityiseen tallennustilaan, ja ne näkyvät vain sinulle. Vaatteiden kuvat tallennetaan arvaamattomalla osoitteella, eikä niitä voi selata tai listata. Jos jaat vaatteen kuvan osoitteen, sen saaja näkee kuvan.</p>
+
+        <h2>6. Säilytysaika ja tilin poisto</h2>
+        <p>Säilytämme tietojasi niin kauan kuin sinulla on tili. Voit poistaa tilisi milloin tahansa sovelluksessa (Profiili → Poista tili). Silloin tilisi, vaatekaappisi, perheenjäsenten tiedot ja kuvat poistetaan heti. Salatuista varmuuskopioista tiedot poistuvat viimeistään 90 päivän kuluttua.</p>
+
+        <h2>7. Lasten tiedot</h2>
+        <p>Vekki on tarkoitettu vanhemmille ja muille huoltajille, jotka voivat tallentaa sovellukseen myös lastensa tietoja, kuten nimen, pituuden, koot ja profiilikuvan. Lapsen tiedot tallennetaan vain huoltajan tilille, eikä niitä käytetä mihinkään muuhun kuin sovelluksen toimintaan.</p>
+
+        <h2>8. Oikeutesi</h2>
         <p>Sinulla on oikeus:</p>
         <ul>
-          <li>Tarkastaa tallentamamme tiedot</li>
-          <li>Pyytää tietojesi poistamista</li>
-          <li>Peruuttaa suostumuksesi milloin tahansa</li>
+          <li>saada tietää, mitä tietoja sinusta käsittelemme, ja saada niistä kopio</li>
+          <li>korjata virheelliset tiedot (useimmat voit korjata itse sovelluksessa)</li>
+          <li>poistaa tietosi (sovelluksessa tai pyytämällä)</li>
+          <li>rajoittaa tai vastustaa tietojesi käsittelyä</li>
+          <li>siirtää tietosi toiseen palveluun</li>
+          <li>tehdä valitus tietosuojavaltuutetulle (<a href="https://tietosuoja.fi">tietosuoja.fi</a>)</li>
         </ul>
         <p>Ota yhteyttä: <a href="mailto:vekkiapp@outlook.com">vekkiapp@outlook.com</a></p>
 
-        <h2>8. Muutokset tietosuojaselosteeseen</h2>
-        <p>Voimme päivittää tätä tietosuojaselostetta. Tarkista sivu säännöllisesti.</p>
+        <h2>9. Muutokset</h2>
+        <p>Voimme päivittää tätä selostetta, kun sovellus tai käyttämämme palvelut muuttuvat. Päivityspäivä näkyy sivun alussa.</p>
       </div>
     </div>
 
     <!-- ENGLISH -->
     <div class="section" id="en">
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated April 6, 2025</p>
+      <p class="updated">Last updated October 11, 2026</p>
       <div class="card">
         <h2>1. Data Controller</h2>
-        <p>Vekki App<br>
+        <p>Olli Paananen, developer of the Vekki app<br>
         Contact: <a href="mailto:vekkiapp@outlook.com">vekkiapp@outlook.com</a></p>
 
-        <h2>2. Data We Collect</h2>
-        <p>We collect the following information when you use the app:</p>
+        <h2>2. Data We Process</h2>
         <p><strong>Account information</strong></p>
         <ul>
           <li>Email address</li>
-          <li>Password (stored encrypted)</li>
+          <li>Password (stored encrypted, we can't see it)</li>
         </ul>
-        <p><strong>Profile information</strong></p>
+        <p><strong>Profile and family member information</strong></p>
         <ul>
-          <li>Display name</li>
-          <li>Profile photo</li>
-        </ul>
-        <p><strong>Family member information</strong></p>
-        <ul>
-          <li>Name</li>
-          <li>Profile photo</li>
-          <li>Height</li>
-          <li>Clothing, shoe, and hat sizes</li>
+          <li>Names and profile photos</li>
+          <li>Height and clothing, shoe and hat sizes</li>
         </ul>
         <p><strong>Wardrobe information</strong></p>
         <ul>
-          <li>Item names, categories, colors, brands, and sizes</li>
+          <li>Item descriptions, brands, categories, colors, sizes, seasons and statuses</li>
           <li>Photos of clothing items</li>
-          <li>Purchase prices and dates (optional)</li>
-          <li>Outfit combinations</li>
+          <li>Outfits, the shopping list, and brands and categories you add yourself</li>
         </ul>
-
-        <h2>3. Why We Collect Data</h2>
-        <p>Data is used solely to provide the app's functionality. We do not use your data for marketing purposes or share it with third parties for advertising.</p>
-
-        <h2>4. Data Storage</h2>
-        <p>Data is stored in the Supabase cloud service. Profile photos are stored in private storage and are not publicly accessible. Clothing photos are stored in cloud storage.</p>
-
-        <h2>5. Third Parties</h2>
+        <p><strong>Usage information</strong></p>
         <ul>
-          <li><strong>Supabase</strong> — database and storage</li>
-          <li><strong>Apple App Store</strong> — app distribution</li>
+          <li>Anonymous events about how the app is used (e.g. adding an item, saving an outfit), device model, operating system, app version and language. These are not linked to your name, email or wardrobe content.</li>
+          <li>The number of image searches per month (for the search quota). We don't store your search terms.</li>
         </ul>
 
-        <h2>6. Children's Data</h2>
-        <p>The app is designed for family use and may include information about children. A child's data is stored only within the parent or guardian's account. Profile photos, which may include children's faces, are stored privately.</p>
+        <h2>3. How We Use Data</h2>
+        <ul>
+          <li><strong>Running the app</strong> (saving and showing your account and wardrobe, image search). Legal basis: providing the service to you.</li>
+          <li><strong>Account emails</strong>: email confirmation and password reset. Legal basis: providing the service.</li>
+          <li><strong>Improving the app</strong> with anonymous usage information. Legal basis: legitimate interest.</li>
+          <li><strong>Backups</strong> so your data isn't lost if something fails. Legal basis: legitimate interest.</li>
+        </ul>
+        <p>We don't use your data for marketing, we don't track you across other apps, and we don't sell or share your data for advertising.</p>
 
-        <h2>7. Your Rights</h2>
+        <h2>4. Service Providers</h2>
+        <p>We use the following services, which process data on our behalf:</p>
+        <ul>
+          <li><strong>Supabase</strong>: database, sign-in and photos. Servers are in London, United Kingdom, which the EU recognizes as providing adequate data protection.</li>
+          <li><strong>Google (Gmail)</strong>: sending confirmation and password emails.</li>
+          <li><strong>PostHog</strong> (EU servers): anonymous usage information.</li>
+          <li><strong>Cloudflare</strong> (EU): encrypted backups.</li>
+          <li><strong>Image search</strong>: your search term is passed through our own server (Render) to SerpApi, which fetches the images from Google. Your name, email or device address are not shared with them.</li>
+          <li><strong>Expo</strong>: delivering app updates.</li>
+          <li><strong>Apple App Store</strong>: app distribution.</li>
+        </ul>
+        <p>Some providers are based in the United States. Transfers outside the EU use safeguards approved by the EU, such as Standard Contractual Clauses.</p>
+
+        <h2>5. Who Can See Photos</h2>
+        <p>Profile photos, which may show children's faces, are kept in private storage and are visible only to you. Clothing photos are stored at an unguessable address and can't be browsed or listed. If you share the address of a clothing photo, the recipient can see it.</p>
+
+        <h2>6. Retention and Account Deletion</h2>
+        <p>We keep your data for as long as you have an account. You can delete your account at any time in the app (Profile → Delete account). Your account, wardrobe, family member information and photos are then deleted immediately. Encrypted backups are deleted within 90 days.</p>
+
+        <h2>7. Children's Data</h2>
+        <p>Vekki is meant for parents and other guardians, who can also save information about their children, such as name, height, sizes and a profile photo. A child's data is stored only in the guardian's account and is used only to run the app.</p>
+
+        <h2>8. Your Rights</h2>
         <p>You have the right to:</p>
         <ul>
-          <li>Access the data we store about you</li>
-          <li>Request deletion of your data</li>
-          <li>Withdraw your consent at any time</li>
+          <li>know what data we process about you and get a copy of it</li>
+          <li>correct inaccurate data (most of it you can edit yourself in the app)</li>
+          <li>delete your data (in the app or by asking us)</li>
+          <li>restrict or object to the processing of your data</li>
+          <li>move your data to another service</li>
+          <li>lodge a complaint with a data protection authority (in Finland: <a href="https://tietosuoja.fi/en">tietosuoja.fi</a>)</li>
         </ul>
         <p>Contact us: <a href="mailto:vekkiapp@outlook.com">vekkiapp@outlook.com</a></p>
 
-        <h2>8. Changes to This Policy</h2>
-        <p>We may update this privacy policy from time to time. Please check this page periodically.</p>
+        <h2>9. Changes</h2>
+        <p>We may update this policy when the app or the services we use change. The date of the latest update is shown at the top of this page.</p>
       </div>
     </div>
 
