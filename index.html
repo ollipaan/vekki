@@ -239,6 +239,8 @@
       document.querySelector(`[onclick="setLang('${lang}')"]`).classList.add('active')
       document.documentElement.lang = lang
     }
+    // Kieliversio osoitteella: #en tai #fi
+    if (location.hash === '#en') setLang('en')
   </script>
 </body>
 </html>
